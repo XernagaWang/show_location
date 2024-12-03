@@ -72,7 +72,7 @@ uploaded_file = st.file_uploader("Please select a file to upload(.xlsx file only
 
 # if uploaded_file is not None:
 if (uploaded_file is not None and not st.session_state.geocoding_done):  # 检查是否需要执行获取经纬度的操作
-	df = pd.read_excel(uploaded_file, header=1)
+	df = pd.read_excel(uploaded_file,)
 	num_rows = len(df)
 	estimated_time = num_rows * 5
 	with st.spinner(f"Geocoding locations...Estimated time: {estimated_time} seconds"):
